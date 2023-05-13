@@ -4,16 +4,15 @@ def f(x):
     return f
 
 
-#Pick two values for a and b
-# a = 1
-# b = 2
-# if(f(a) * f(b)) >= 0: 
-#     a += 1
-#     b += 1
-
-
 #Create a function to implement the bisection method algorithm
-def getApproximateValue(a, b):
+def getApproximateValue():
+        #Pick two values for a and b
+        a = 1
+        b = 2
+        #Put the condition for selection of a and b
+        if(f(a) * f(b)) >= 0: 
+            a += 1
+            b += 1
         #Set a confidence level
         cl = 0.005
         t = (a + b) / 2
@@ -34,7 +33,7 @@ def getApproximateValue(a, b):
             p = f(t)
         return t
 
-v = getApproximateValue(1, 2)
+v = getApproximateValue()
 print(v)
 
     
